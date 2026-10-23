@@ -46,7 +46,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}header{gap:20px;min-height:76
 </style><style>
 #access-gateway{position:fixed;inset:0;z-index:9999;background:radial-gradient(circle at 18% 25%,#223f5b 0%,#0c192b 42%,#070d17 100%);display:flex;align-items:center;justify-content:center;overflow-y:auto;padding:22px}
 #access-gateway[hidden]{display:none}
-.gateway-panel{width:min(100%,980px);max-height:calc(100dvh - 44px);overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;border:1px solid #665838;background:#0e1b2b;box-shadow:0 24px 90px #000a;overflow:hidden}
+.gateway-panel{width:min(100%,980px);max-height:calc(100dvh - 44px);overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;border:1px solid #665838;background:#0e1b2b;box-shadow:0 24px 90px #000a}
 .gateway-feature{padding:clamp(28px,5vw,55px);background:radial-gradient(circle at 70% 75%,#26425d,#111e30 65%);display:flex;flex-direction:column;justify-content:space-between;gap:24px;position:relative}
 .gateway-feature:before{content:'◇';position:absolute;right:30px;top:38%;font-size:180px;line-height:1;color:#d4af57;opacity:.10;pointer-events:none}
 .gateway-logo{font:clamp(37px,5vw,55px) Georgia,serif;letter-spacing:10px;color:#f5f2ea;line-height:1}
@@ -67,7 +67,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}header{gap:20px;min-height:76
 .gateway-disclosure summary{cursor:pointer;color:#e7c47a;font-size:13px;font-weight:700}
 .gateway-disclosure p{margin:10px 0 0;font-size:12px}
 .gateway-note{font-size:11px!important;color:#9daec0!important;margin-top:18px}
-@media(max-width:720px){#access-gateway{align-items:flex-start;padding:12px}.gateway-panel{max-height:calc(100dvh - 24px)}.gateway-panel{grid-template-columns:1fr}.gateway-feature{padding:26px;gap:16px}.gateway-feature h2{font-size:29px}.gateway-feature p{margin:0}.gateway-highlights{grid-template-columns:1fr 1fr;gap:9px;font-size:10px}.gateway-access{padding:26px}.gateway-feature:before{font-size:120px;right:10px;top:15%}}
+@media(max-width:720px){#access-gateway{align-items:flex-start;padding:12px}.gateway-panel{max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}.gateway-panel{grid-template-columns:1fr}.gateway-feature{padding:26px;gap:16px}.gateway-feature h2{font-size:29px}.gateway-feature p{margin:0}.gateway-highlights{grid-template-columns:1fr 1fr;gap:9px;font-size:10px}.gateway-access{padding:26px}.gateway-feature:before{font-size:120px;right:10px;top:15%}}
 </style></head><body><div id="access-gateway" role="dialog" aria-modal="true" aria-labelledby="gateway-title">
 <div class="gateway-panel">
 <div class="gateway-feature">
