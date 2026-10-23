@@ -44,42 +44,57 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}header{gap:20px;min-height:76
 .research-center{background:#0b1726}.research-intro{max-width:840px}.research-toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:24px 0}.research-toolbar input{flex:1;min-width:220px;padding:15px;background:#101f32;color:#f5f2ea;border:1px solid #53647b;font-size:16px}.research-table{display:grid;gap:12px}.research-record{background:#111f31;border:1px solid #33465a;padding:18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center}.research-record h3{font-size:22px;margin:4px 0}.research-record p{margin:5px 0;font-size:13px}.research-record a{color:#e8c36d;text-decoration:underline;text-underline-offset:4px}.research-record .status{font-size:11px;letter-spacing:1px;color:#d4af57}.research-record .record-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start}.research-info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:28px 0}.research-info>div{border:1px solid #3d4e62;padding:20px;background:#101d2d}.research-info h3{font-size:22px}.research-info p{font-size:14px}.research-info a{color:#e8c36d}.policy-note{border-left:3px solid #d4af57;padding:14px 18px;background:#111e30;max-width:880px}.policy-note p{margin:6px 0}.research-center details{border-bottom:1px solid #3d4e62;padding:15px 0}.research-center summary{cursor:pointer;color:#f5f2ea;font-weight:600}
 @media(max-width:700px){.research-info{grid-template-columns:1fr}.research-record{grid-template-columns:1fr}.research-record .record-links{flex-direction:row;flex-wrap:wrap}.research-toolbar input{width:100%}}
 </style><style>
-#access-gateway{position:fixed;inset:0;z-index:9999;display:block;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:clamp(12px,3vw,36px);background:linear-gradient(135deg,#dce7ee 0%,#eef3f5 48%,#dce7ec 100%);color:#16253a}
+#access-gateway{position:fixed;inset:0;z-index:9999;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:clamp(16px,4vw,48px) 16px;background:linear-gradient(145deg,#dbe6ec,#f1f5f6 60%,#dce8ef);color:#1a3045}
 #access-gateway[hidden]{display:none}
-.gateway-panel{max-width:980px;margin:0 auto 20px;background:#fff;border:1px solid #c8d6df;border-radius:20px;overflow:hidden;box-shadow:0 12px 38px #233d5422;display:grid;grid-template-columns:.95fr 1.05fr}
-.gateway-feature{background:linear-gradient(155deg,#253f5b,#172c44 70%,#334e65);color:#fff;padding:clamp(24px,4vw,45px);display:flex;flex-direction:column;gap:22px;justify-content:space-between;min-width:0}
-.gateway-logo{font:clamp(34px,5vw,51px) Georgia,serif;letter-spacing:8px;color:#f7f2e9;line-height:1}.gateway-logo small{display:block;font:10px Arial,sans-serif;letter-spacing:5px;color:#e1be70;margin-top:12px}
-.gateway-art{display:block;width:min(100%,300px);aspect-ratio:1;margin:0 auto;object-fit:cover;object-position:center;border-radius:50%;border:1px solid #a88b54;box-shadow:0 10px 35px #0005}
-.gateway-feature .eyebrow{color:#e1be70}.gateway-feature h2{font:clamp(29px,4vw,41px) Georgia,serif;line-height:1.15;margin:10px 0}.gateway-feature p{font-size:14px;line-height:1.6;color:#e0e8f0;margin:0}
-.gateway-access{padding:clamp(25px,4vw,46px);background:#fff;color:#172941;min-width:0}.gateway-access .eyebrow{color:#94723c}.gateway-access h1{font:clamp(30px,4vw,41px) Georgia,serif;color:#15283e;margin:14px 0}.gateway-access p{font-size:14px;line-height:1.6;color:#546578}
-.gateway-check{display:flex;align-items:flex-start;gap:13px;padding:15px 14px;border:1px solid #d4dfe6;border-radius:10px;margin:13px 0;color:#20334a;font-size:14px;line-height:1.5;cursor:pointer}.gateway-check input{width:21px;height:21px;flex:none;accent-color:#b18c4b;margin:1px 0}
-.gateway-disclosure{border:1px solid #d4dfe6;border-radius:9px;background:#f6f9fb;padding:13px 16px;margin:15px 0}.gateway-disclosure summary{cursor:pointer;color:#29445e;font-size:13px;font-weight:bold}.gateway-disclosure p{margin-bottom:0;font-size:12px}
-.gateway-access button{width:100%;margin-top:10px;border-radius:9px;background:#d7b15e;color:#17243a;padding:17px}.gateway-access button:disabled{opacity:.5;cursor:not-allowed}.gateway-note{font-size:12px!important;color:#64788a!important;text-align:center}
-.gateway-benefits{max-width:980px;margin:0 auto 18px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.gateway-benefit{border:1px solid #c8d6df;background:#fff;border-radius:14px;padding:18px;min-width:0}.gateway-benefit strong{display:block;font-size:13px;color:#1e3d5a;line-height:1.3}.gateway-benefit p{font-size:12px;color:#5b6e7c;line-height:1.45;margin:9px 0 0}.gateway-benefit .mark{color:#b18c4b;font-size:23px;margin-bottom:10px}
-.gateway-footer{max-width:980px;margin:0 auto 18px;text-align:center;font-size:12px;line-height:1.5;color:#4d6476}
-@media(max-width:720px){#access-gateway{padding:12px}.gateway-panel{grid-template-columns:1fr;border-radius:14px}.gateway-feature{padding:24px;gap:14px}.gateway-feature h2{font-size:28px}.gateway-art{width:min(100%,170px)}.gateway-access{padding:24px}.gateway-benefits{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.gateway-benefit{padding:15px}.gateway-benefit strong{font-size:12px}.gateway-benefit p{font-size:11px}}
+.gateway-panel{max-width:590px;margin:0 auto 18px;background:#fff;border:1px solid #d5e0e5;border-radius:18px;overflow:hidden;box-shadow:0 18px 60px #1c33471c}
+.gateway-feature{padding:32px 32px 24px;text-align:center;background:linear-gradient(145deg,#213e59,#162d46);color:#f7f3ea}
+.gateway-logo{display:flex;flex-direction:column;align-items:center;gap:4px;color:#f7f3ea}
+.gateway-logo-mark{width:60px;height:60px;display:grid;place-items:center;margin:0 auto 14px;border:1px solid #b99b62;border-radius:50%;font:34px Georgia,serif;color:#d7b978}
+.gateway-logo-name{font:clamp(42px,7vw,60px) Georgia,serif;letter-spacing:.22em;padding-left:.22em;line-height:1.05}
+.gateway-logo small{display:block;font:10px Arial,sans-serif;letter-spacing:.46em;padding-left:.46em;color:#dfc58f;margin-top:10px}
+.gateway-feature .eyebrow{font-size:11px;letter-spacing:.18em;color:#e1c38d;margin:24px 0 8px}
+.gateway-feature h2{font:clamp(23px,4vw,29px) Georgia,serif;line-height:1.2;margin:0}
+.gateway-feature p{font-size:13px;line-height:1.55;color:#d8e2ea;max-width:430px;margin:12px auto 0}
+.gateway-access{padding:26px 32px 30px;color:#1b3248}
+.gateway-access .eyebrow{color:#9b7841;font-size:11px;letter-spacing:.14em}
+.gateway-access h1{font:30px Georgia,serif;color:#192f45;margin:10px 0}
+.gateway-access p{font-size:14px;line-height:1.55;color:#5c6c79;margin:0 0 17px}
+.gateway-check{display:flex;gap:12px;align-items:flex-start;border:1px solid #d9e3e8;border-radius:10px;padding:13px;margin:11px 0;font-size:14px;line-height:1.45;cursor:pointer}
+.gateway-check input{flex:none;width:20px;height:20px;margin:1px 0;accent-color:#b38c4a}
+.gateway-disclosure{border-bottom:1px solid #d9e3e8;padding:10px 0;margin:9px 0 16px}
+.gateway-disclosure summary{cursor:pointer;font-size:13px;color:#38526a;font-weight:600}
+.gateway-disclosure p{font-size:12px;margin:10px 0}
+.gateway-access button{width:100%;border-radius:8px;background:#d7b25f;padding:16px;font-size:13px}
+.gateway-access button:disabled{opacity:.5;cursor:not-allowed}
+.gateway-note{font-size:12px!important;color:#6e7d89!important;text-align:center;margin:14px 0 0!important}
+.gateway-benefits{max-width:590px;margin:0 auto 14px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gateway-benefit{border:1px solid #d5e0e5;background:#fff;border-radius:12px;padding:16px}
+.gateway-benefit strong{display:block;font-size:13px;color:#26435d}
+.gateway-benefit p{font-size:12px;line-height:1.45;color:#647585;margin:6px 0 0}
+.gateway-benefit .mark{color:#ad8a4c;font-size:19px;margin-bottom:7px}
+.gateway-footer{max-width:590px;margin:0 auto 18px;text-align:center;color:#586d7b;font-size:11px;line-height:1.5}
+@media(max-width:520px){.gateway-feature{padding:27px 20px 22px}.gateway-access{padding:24px 20px}.gateway-logo-mark{width:50px;height:50px;font-size:28px}.gateway-logo-name{font-size:44px}.gateway-feature .eyebrow{margin-top:19px}.gateway-benefit{padding:13px}.gateway-benefit strong{font-size:12px}.gateway-benefit p{font-size:11px}}
 </style></head><body><div id="access-gateway" role="dialog" aria-modal="true" aria-labelledby="gateway-title">
 <div class="gateway-panel">
 <div class="gateway-feature">
-<div class="gateway-logo">NOUS<small>BIOSCIENCES</small></div>
-<img class="gateway-art" src="geometry.png" alt="NOUS Biosciences gold geometric emblem" loading="eager">
-<div><div class="eyebrow">PEPTIDES · RESEARCH COMPOUNDS</div><h2>Research starts here.</h2><p>Explore our compound catalog, technical information, and scientific research resources.</p></div>
+<div class="gateway-logo" aria-label="NOUS Biosciences"><span class="gateway-logo-mark" aria-hidden="true">✧</span><span class="gateway-logo-name">NOUS</span><small>BIOSCIENCES</small></div>
+<div class="eyebrow">PEPTIDE RESEARCH · LABORATORY SUPPLIES</div>
+<h2>Welcome to NOUS Biosciences</h2>
+<p>Research peptides, compounds, and technical information.</p>
 </div>
 <div class="gateway-access">
-<div class="eyebrow">WELCOME TO NOUS BIOSCIENCES</div>
-<h1 id="gateway-title">Research access</h1>
-<p>Confirm the following to browse our peptide research catalog.</p>
-<label class="gateway-check"><input id="gateway-adult" type="checkbox"><span>I confirm that I am at least 18 years of age.</span></label>
-<label class="gateway-check"><input id="gateway-research" type="checkbox"><span>I acknowledge that products designated Research Use Only are intended for legitimate laboratory research and not for human or veterinary administration.</span></label>
+<div class="eyebrow">RESEARCH USE ACCESS</div>
+<h1 id="gateway-title">Before you enter</h1>
+<p>Please confirm the following to browse our catalog.</p>
+<label class="gateway-check"><input id="gateway-adult" type="checkbox"><span>I confirm that I am at least 18 years old.</span></label>
+<label class="gateway-check"><input id="gateway-research" type="checkbox"><span>I understand that Research Use Only products are intended for laboratory research, not human or veterinary administration.</span></label>
 <details class="gateway-disclosure"><summary>Research-use disclosure and access terms</summary><p>Research compounds are not presented as approved medicines or for diagnosis, prevention, or treatment of disease. Entry is an acknowledgment only and does not verify identity, institutional affiliation, or qualifications. Product-specific eligibility and legal requirements must be satisfied before any transaction.</p></details>
-<button id="gateway-enter" type="button" disabled>ENTER RESEARCH CATALOG →</button>
-<p class="gateway-note">No account or payment required to browse. Checkout is not currently available.</p>
+<button id="gateway-enter" type="button" disabled>ENTER CATALOG →</button>
+<p class="gateway-note">Browsing does not require an account. Checkout is currently unavailable.</p>
 </div></div>
-<div class="gateway-benefits" aria-label="NOUS research resources">
-<div class="gateway-benefit"><div class="mark">◇</div><strong>Research Catalog</strong><p>Browse compounds, quantities, and product details.</p></div>
-<div class="gateway-benefit"><div class="mark">✧</div><strong>Product Research</strong><p>Learn about biological pathways and proposed mechanisms.</p></div>
-<div class="gateway-benefit"><div class="mark">⌁</div><strong>Technical Information</strong><p>Find available specifications and documentation status.</p></div>
-<div class="gateway-benefit"><div class="mark">✦</div><strong>Research Resources</strong><p>Explore scientific literature and educational guides.</p></div>
+<div class="gateway-benefits" aria-label="NOUS resources">
+<div class="gateway-benefit"><div class="mark">◇</div><strong>Peptide Catalog</strong><p>Products, quantities, and research details.</p></div>
+<div class="gateway-benefit"><div class="mark">✧</div><strong>Research Library</strong><p>Compound information and scientific references.</p></div>
 </div>
 <div class="gateway-footer">© 2026 NOUS BIOSCIENCES · Research Use Only · Not for human or veterinary administration</div>
 </div><header><a class="brand" href="/" aria-label="NOUS Biosciences — Home">NOUS<small>BIOSCIENCES</small></a><nav id="site-nav"><a href="#catalog">CATALOG</a><a href="#mission">ABOUT</a><a href="#standards">RESEARCH STANDARDS</a><a href="#documentation">PRODUCT RESEARCH</a><a href="#learning">PEPTIDE LEARNING</a><a href="#faq">FAQ</a></nav><div class="header-actions"><a class="button" href="#catalog">EXPLORE</a><button aria-label="Open preview cart" class="header-cart" onclick="toggleCart(true)">♧ <span id="mobilecount">0</span></button><button aria-expanded="false" aria-label="Toggle menu" class="menu-toggle" onclick="toggleMenu(this)">☰</button></div></header><main><div class="hero"><div><div class="eyebrow">PEPTIDES · RESEARCH COMPOUNDS</div><h1>Peptide Research.<br/>Elevated.</h1><p><strong style="display:block;color:#e8c36d;font-size:1.04em;letter-spacing:.035em;margin-bottom:12px">Exploring the Science of Peptides</strong>Explore our selection of peptides, research compounds, and laboratory supplies. Browse product details, quantities, and research information in one place.</p><a class="button" href="#catalog">EXPLORE THE CATALOG →</a></div></div><div class="brand-divider"></div><div class="trust-strip" aria-label="Explore research resources"><a href="#learning"><span>◇</span> PEPTIDE RESEARCH <span class="trust-arrow">→</span></a><a href="#catalog"><span>✧</span> PRODUCT INFORMATION <span class="trust-arrow">→</span></a><a href="#documentation"><span>⌁</span> PRODUCT RESEARCH GUIDE <span class="trust-arrow">→</span></a></div><section id="catalog"><div class="section-head"><div><div class="eyebrow">NOUS BIOSCIENCES · PRODUCT COLLECTION</div><h2 style="font-size:44px;margin:12px 0">Shop the Research Catalog</h2></div><span class="pill">RESEARCH CATALOG</span></div><p class="collection-intro">Explore our peptide research collection, including compound profiles, specifications, and educational resources. Checkout is currently unavailable.</p><div class="searchbar"><input aria-label="Search catalog" id="search" placeholder="Search products by name or SKU" type="search"/><span class="smallnote" id="resultcount"></span></div><div class="filters"><button class="active" data-filter="all">ALL</button><button data-filter="compounds">COMPOUNDS</button><button data-filter="blends">BLENDS</button><button data-filter="supplies">SUPPLIES</button></div><div class="grid" id="products"></div></section><section aria-label="Our inspiration" class="symbol-section"><img alt="Gold sacred geometry symbol representing interconnected knowledge" src="geometry.png"/><div><div class="eyebrow">PEPTIDE SCIENCE</div><h2>Explore molecular<br/>research.</h2><p>Explore peptides and research compounds studied in cellular signaling, metabolism, tissue biology, and other areas of modern bioscience.</p></div></section><section aria-label="Research philosophy" class="editorial"><div><div class="mini-tag">PRODUCT INFORMATION</div><h2>Details that matter.</h2><p>Find compound profiles, quantities, research background, and documentation status without digging through lengthy marketing copy.</p><a class="button" href="#standards">OUR RESEARCH APPROACH →</a></div><div class="editorial-art"><img alt="Classical sculpture with geometric gold accents" loading="lazy" src="philosopher.png"/></div></section><section class="band" id="mission"><div class="eyebrow">ABOUT NOUS BIOSCIENCES</div><h2 style="font-size:clamp(35px,5vw,60px)">Focused on research.</h2><p>Explore a growing catalog of research compounds with clear product information and straightforward navigation.</p></section><section id="standards"><div class="eyebrow">Built for scientific transparency</div><h2 style="font-size:44px">Research, without compromise.</h2><div class="features"><div><h3>01 · Documentation</h3><p>Space for authentic batch-specific certificates of analysis and independent testing reports.</p></div><div><h3>02 · Traceability</h3><p>Catalog architecture designed for lot identifiers, specifications, and inventory controls.</p></div><div><h3>03 · Responsible access</h3><p>Buyer eligibility and product compliance checks will be required before real transactions are enabled.</p></div></div></section><section id="documentation" class="research-center" aria-labelledby="documentation-title">
