@@ -1,7 +1,7 @@
 name: Import approved NOUS catalog photos
 on:
   push:
-    paths: [".github/workflows/import-approved-vials.yml"]
+    paths: [".github/workflows/import-approved-vials.yml", "tools/import-approved-vials.py"]
   workflow_dispatch:
 permissions:
   contents: write
