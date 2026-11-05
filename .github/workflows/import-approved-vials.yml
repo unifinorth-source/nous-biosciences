@@ -1,0 +1,38 @@
+name: Import approved NOUS catalog photos
+on:
+  push:
+    paths: [".github/workflows/import-approved-vials.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import-approved:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install Pillow
+      - name: Import ten approved photos
+        run: python tools/import-approved-vials.py
+      - name: Commit permanent assets and bust browser cache
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("index.html")
+          s=p.read_text(encoding="utf-8")
+          assert "?v=45bbc61d" in s, "Catalog reference changed"
+          p.write_text(s.replace("?v=45bbc61d","?v=approved20261105"),encoding="utf-8")
+          for i in range(1,11):
+              f=Path(f"vials/NB-{i:03}.webp")
+              assert f.exists() and f.stat().st_size>20000,f
+          print("Verified ten approved images")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html vials/NB-00[1-9].webp vials/NB-010.webp
+          git diff --cached --quiet || git commit -m "Publish approved NOUS product photography for SKUs 001-010"
+          git push
